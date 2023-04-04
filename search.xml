@@ -14,7 +14,7 @@
 <li><h4 id="运行服务器"><a href="#运行服务器" class="headerlink" title="运行服务器"></a>运行服务器</h4></li>
 </ul>
 <blockquote>
-<p>&amp;emsp$ hexo server<br>&emsp;运行服务器</p>
+<p>&emsp;$ hexo server<br>&emsp;运行服务器</p>
 </blockquote>
 <p>&emsp;&emsp;&emsp;更多: <a href="https://hexo.io/docs/server.html">运行服务器</a></p>
 <ul>
