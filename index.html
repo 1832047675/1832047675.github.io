@@ -17,7 +17,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha256-/4UQcSmErDzPCMAiuOiWPVVsNN2s3ZY/NsmXNcj0IFc=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.15.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="岁月不抵长情">
@@ -58,6 +60,9 @@
       <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
@@ -72,15 +77,46 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
 
 
 
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </header>
         
@@ -116,6 +152,11 @@
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
   </nav>
 </div>
   <div class="links-of-author animated">
@@ -123,7 +164,10 @@
         <a href="https://github.com/1832047675" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;1832047675" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://qm.qq.com/cgi-bin/qm/qr?k=cEEnKMVxinrVwgu0Eg_6vv8NJDkI_8wG&noverify=0&personal_qrcode_source=4" title="QQ → https:&#x2F;&#x2F;qm.qq.com&#x2F;cgi-bin&#x2F;qm&#x2F;qr?k&#x3D;cEEnKMVxinrVwgu0Eg_6vv8NJDkI_8wG&amp;noverify&#x3D;0&amp;personal_qrcode_source&#x3D;4" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+        <a href="https://qm.qq.com/cgi-bin/qm/qr?k=cEEnKMVxinrVwgu0Eg_6vv8NJDkI_8wG&noverify=0&personal_qrcode_source=4" title="QQ&lt;sub&gt;1&lt;&#x2F;sub&gt; → https:&#x2F;&#x2F;qm.qq.com&#x2F;cgi-bin&#x2F;qm&#x2F;qr?k&#x3D;cEEnKMVxinrVwgu0Eg_6vv8NJDkI_8wG&amp;noverify&#x3D;0&amp;personal_qrcode_source&#x3D;4" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ<sub>1</sub></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://qm.qq.com/cgi-bin/qm/qr?k=NvR7SwGAq7gIwEaxKsYk7ZIeeER_dDoW&noverify=0&personal_qrcode_source=4" title="QQ&lt;sub&gt;2&lt;&#x2F;sub&gt; → https:&#x2F;&#x2F;qm.qq.com&#x2F;cgi-bin&#x2F;qm&#x2F;qr?k&#x3D;NvR7SwGAq7gIwEaxKsYk7ZIeeER_dDoW&amp;noverify&#x3D;0&amp;personal_qrcode_source&#x3D;4" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ<sub>2</sub></a>
       </span>
   </div>
 
@@ -147,7 +191,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/01/%E6%88%91%E7%9A%84%E6%96%B0%E6%96%87%E7%AB%A0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8F%91%E5%B1%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -165,7 +209,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/04/01/%E6%88%91%E7%9A%84%E6%96%B0%E6%96%87%E7%AB%A0/" class="post-title-link" itemprop="url">Hello World</a>
+          <a href="/2023/04/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%9A%84%E5%8F%91%E5%B1%95/" class="post-title-link" itemprop="url">计算机发展史</a>
         </h2>
 
         <div class="post-meta-container">
@@ -175,9 +219,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-04-01 19:37:55 / 修改时间：19:55:30" itemprop="dateCreated datePublished" datetime="2023-04-01T19:37:55+08:00">2023-04-01</time>
+      <time title="创建时间：2023-04-03 21:46:25" itemprop="dateCreated datePublished" datetime="2023-04-03T21:46:25+08:00">2023-04-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-04-04 18:14:58" itemprop="dateModified" datetime="2023-04-04T18:14:58+08:00">2023-04-04</time>
     </span>
 
   
@@ -190,19 +240,8 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+          <h4 id="emsp-emsp-第一台编辑"><a href="#emsp-emsp-第一台编辑" class="headerlink" title="&emsp;&emsp;第一台编辑"></a>&emsp;&emsp;第一台编辑</h4><p>&emsp;&emsp;众所周知的第一台计算机是美国军方定制，专门为了计算弹道和射击特性表面而研制的，承担开发任务的“莫尔小组”由四位科学家和工程师 埃克特、莫克利、戈尔斯坦、 博克斯组成。1946年这台计算机主要元器件采用的是 电子管。该机使用了1500 个 继电器，18800个电子管，占地170m 2，重量重达30多吨，耗电150KW，造价48万美元。开机时让周围居民暂时停电。这台计算机每秒能完成5000次加法运算，400次乘法运算，比当时最快的计算工具快300倍，是继电器计算机的1000倍、手工计算的20万倍。用今天的标准看，它是那样的“笨拙”和“低级”，其功能远不如一只掌上可编程计算器，但它使科学家们从复杂的计算中解脱出来，它的诞生标志着人类进入了一个崭新的信息革命时代。</p>
+<p>&emsp;&emsp;然而，英国在二战期间研制的用于破解密电的电子计算机巨人（Colossus）却要比ENIAC早两年（1943年12 ），巨人计算机是第一部全然电子化的电脑器件，使用了数量庞大的真空管，以纸带作为输入器件，能够执行各种布林逻辑的运算，但仍未具备图灵完全的标准。巨人计算机建造到第9部“马克二号”4，但是其实体器件、设计图样和操作方法，直到1970年代都还是一个谜。后来温斯顿·丘吉尔亲自下达一项销毁命令，将巨人计算机全都拆解成巴掌大小的废铁，巨人计算机才因此在许多计算机历史里都未留下一纸纪录。英国布莱切利园目前展有巨人计算机的重建机种。</p>
 
       
     </div>
@@ -257,9 +296,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-04-01 18:03:16 / 修改时间：20:01:16" itemprop="dateCreated datePublished" datetime="2023-04-01T18:03:16+08:00">2023-04-01</time>
+      <time title="创建时间：2023-04-01 18:03:16" itemprop="dateCreated datePublished" datetime="2023-04-01T18:03:16+08:00">2023-04-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-04-04 17:07:47" itemprop="dateModified" datetime="2023-04-04T17:07:47+08:00">2023-04-04</time>
     </span>
 
   
@@ -272,19 +317,34 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>欢迎来到 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo（六角形）</a>! 这是你的第一个网站杰作， 点击 <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation（文档）</a> 学习更多关于hexo(六角形)的知识。你在使用六角形的过程中碰到的大部分问题都能在<a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a>里面找到答案，你也可以通过在<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>上发表问题来得到大家的回复。</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+          <h4 id="emsp-emsp-欢迎来到-六边形-这是你的第一个网站杰作，-点击-文档-学习更多关于hexo-六角形-的知识。你在使用六边形的过程中碰到的大部分问题都能在故障排除里面找到答案，你也可以通过在GitHub上发表问题来得到大家的回复。此外，你也可以通过点击菜单栏-左下角三个杠-来联系我，我会尽力为你解答你所遇到的大部分问题。"><a href="#emsp-emsp-欢迎来到-六边形-这是你的第一个网站杰作，-点击-文档-学习更多关于hexo-六角形-的知识。你在使用六边形的过程中碰到的大部分问题都能在故障排除里面找到答案，你也可以通过在GitHub上发表问题来得到大家的回复。此外，你也可以通过点击菜单栏-左下角三个杠-来联系我，我会尽力为你解答你所遇到的大部分问题。" class="headerlink" title="&emsp;&emsp;欢迎来到 六边形! 这是你的第一个网站杰作， 点击 文档 学习更多关于hexo(六角形)的知识。你在使用六边形的过程中碰到的大部分问题都能在故障排除里面找到答案，你也可以通过在GitHub上发表问题来得到大家的回复。此外，你也可以通过点击菜单栏(左下角三个杠)来联系我，我会尽力为你解答你所遇到的大部分问题。"></a>&emsp;&emsp;欢迎来到 <a target="_blank" rel="noopener" href="https://hexo.io/">六边形</a>! 这是你的第一个网站杰作， 点击 <a target="_blank" rel="noopener" href="https://hexo.io/docs/">文档</a> 学习更多关于hexo(六角形)的知识。你在使用六边形的过程中碰到的大部分问题都能在<a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">故障排除</a>里面找到答案，你也可以通过在<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>上发表问题来得到大家的回复。此外，你也可以通过点击菜单栏(左下角三个杠)来联系我，我会尽力为你解答你所遇到的大部分问题。</h4><h2 id="快速部署"><a href="#快速部署" class="headerlink" title="快速部署"></a>快速部署</h2><ul>
+<li><h4 id="创建一个页面"><a href="#创建一个页面" class="headerlink" title="创建一个页面"></a>创建一个页面</h4></li>
+</ul>
+<blockquote>
+<p>$ hexo new “My New Post”<br>&emsp;&emsp;创建一个新的文档</p>
+</blockquote>
+<p>&emsp;&emsp;&emsp;更多: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">创建文档</a></p>
+<ul>
+<li><h4 id="运行服务器"><a href="#运行服务器" class="headerlink" title="运行服务器"></a>运行服务器</h4></li>
+</ul>
+<blockquote>
+<p>&amp;emsp$ hexo server<br>&emsp;运行服务器</p>
+</blockquote>
+<p>&emsp;&emsp;&emsp;更多: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">运行服务器</a></p>
+<ul>
+<li><h4 id="生成文件"><a href="#生成文件" class="headerlink" title="生成文件"></a>生成文件</h4></li>
+</ul>
+<blockquote>
+<p>$ hexo generate<br>    &emsp; 生成文件</p>
+</blockquote>
+<p>&emsp;&emsp;&emsp;更多: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">生成文件</a></p>
+<ul>
+<li><h4 id="部署到站点"><a href="#部署到站点" class="headerlink" title="部署到站点"></a>部署到站点</h4></li>
+</ul>
+<blockquote>
+<p>$ hexo deploy<br>&emsp;部署网页</p>
+</blockquote>
+<p>&emsp;&emsp;&emsp;更多: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">部署</a></p>
 
       
     </div>
@@ -319,8 +379,10 @@
   </span>
   <span class="author" itemprop="copyrightHolder">岁月不抵长情</span>
 </div>
+<!--
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
+-->
 
     </div>
   </footer>
@@ -347,7 +409,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
 <script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
 
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
 
 
 
